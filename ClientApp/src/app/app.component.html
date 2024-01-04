@@ -1,1 +1,15 @@
-<router-outlet></router-outlet>
+<mat-toolbar color="primary">
+    <span>
+        <button mat-icon-button (click)="toggleNav()">
+            <mat-icon fontIcon="menu" ></mat-icon>
+        </button>
+    </span>
+    <span>My Application</span>
+</mat-toolbar>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav [opened]="navOpen" mode="side" opened>Sidenav content</mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
